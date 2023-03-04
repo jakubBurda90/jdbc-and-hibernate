@@ -41,5 +41,10 @@ public class LambdaExercises {
         };
 
         thirdLambda.wyswietl();
+
+        Metody fouthLambda = () ->{};
+        fouthLambda.cry();
+
+        //lambda to metoda anonimowa która pociąga za sobą zawsze definicje klasy.
     }
 }
