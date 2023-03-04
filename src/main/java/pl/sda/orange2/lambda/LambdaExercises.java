@@ -67,5 +67,9 @@ public class LambdaExercises {
         CoffeMaker shortVersion = (water, coffeeType) -> "my coffe";
 
         myCoffeMaker3.prepare(4,"Latte");
+
+        String myCoffee = myCoffeMaker3.prepare(6, "small");
+        System.out.println("my coffe is redy");
+
     }
 }
