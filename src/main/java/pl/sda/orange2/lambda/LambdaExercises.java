@@ -16,6 +16,16 @@ public class LambdaExercises {
         obiekt2.wyswietl();
 
 
+        // klasa anonimowa
+        Metody anonymusClassReference = new Metody() {
+            @Override
+            public void wyswietl() {
+                System.out.println("Przykład 1");
+            }
+        };
 
+        anonymusClassReference.wyswietl();
+
+        // Metody obiekt3 = new String ("");
     }
 }
