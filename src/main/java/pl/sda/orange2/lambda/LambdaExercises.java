@@ -46,5 +46,26 @@ public class LambdaExercises {
         fouthLambda.cry();
 
         //lambda to metoda anonimowa która pociąga za sobą zawsze definicje klasy.
+
+        System.out.println("--------------------");
+        System.out.println("Cofee time");
+
+        CoffeMaker myCoffeMaker = (int water, String coffeeType) -> "my coffee;";
+        CoffeMaker myCoffeMaker2 = (int water, String coffeeType) -> {
+
+            return "my coffee;";
+        };
+        CoffeMaker myCoffeMaker3 = (int water, String coffeeType) -> {
+
+            System.out.println("Water volume " + water);
+
+            System.out.println("Coffee brewing type is " +coffeeType );
+
+            return "my coffee";
+        };
+
+        CoffeMaker shortVersion = (water, coffeeType) -> "my coffe";
+
+        myCoffeMaker3.prepare(4,"Latte");
     }
 }
