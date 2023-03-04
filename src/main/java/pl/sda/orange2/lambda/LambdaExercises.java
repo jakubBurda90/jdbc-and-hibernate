@@ -5,14 +5,15 @@ public class LambdaExercises {
     public static void main(String[] args) {
 
 
-        Metody obietk_1 = new Implementujaca();
-        obietk_1.wyswietl();
-        ((Implementujaca)obietk_1).sing();
+        Metody obietk1 = new Implementujaca();
+        obietk1.wyswietl();
+        ((Implementujaca)obietk1).sing();
 
 
 
-        Implementujaca obiekt_2 = new Implementujaca();
-        obiekt_2.sing();
+        Implementujaca obiekt2 = new Implementujaca();
+        obiekt2.sing();
+        obiekt2.wyswietl();
 
 
 
