@@ -27,5 +27,19 @@ public class LambdaExercises {
         anonymusClassReference.wyswietl();
 
         // Metody obiekt3 = new String ("");
+
+        Metody firstLambda = () ->{};
+        Metody secondLambda = () -> System.out.println("Lambda");
+        firstLambda.wyswietl();
+        secondLambda.wyswietl();
+
+        Metody thirdLambda = () -> {
+
+            for(int i=0; i<5; i++){
+                System.out.println(i);
+            }
+        };
+
+        thirdLambda.wyswietl();
     }
 }
