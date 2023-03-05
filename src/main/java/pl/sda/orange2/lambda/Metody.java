@@ -6,5 +6,6 @@ public interface Metody {
 
     void wyswietl();
 
-    default void cry(){}
+    default void cry() {
+    }
 }
