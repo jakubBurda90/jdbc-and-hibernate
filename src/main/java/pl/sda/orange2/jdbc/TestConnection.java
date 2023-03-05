@@ -23,9 +23,12 @@ public class TestConnection {
 
             Statement queryStatement = h2connection.createStatement();
             ResultSet queryResult = queryStatement.executeQuery(query);
-            queryResult.next();
-            System.out.println("ID: " +queryResult.getInt(1));
-            System.out.println("NAME: " +queryResult.getString(1));
+            while (queryResult.next()){
+                System.out.println("ID: " +queryResult.getInt(1));
+                System.out.println("NAME: " +queryResult.getString(1));
+
+
+            }
         }catch (SQLException exc){
             System.out.println("got exception " + exc);
 
