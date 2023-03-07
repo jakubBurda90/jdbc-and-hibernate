@@ -9,6 +9,11 @@ import java.sql.Statement;
 
 public class TestConnection {
     public static void main(String[] args) {
+
+        String className = TestConnection.class.getName();
+        System.out.println(className);
+
+
         String query = """
                 SELECT ID, NAME
                 FROM TEST
