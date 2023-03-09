@@ -99,5 +99,27 @@ INSERT INTO CARS (COLOUR, BRAND, MODEL) VALUES ('RED', 'TOYOTA', 'COROLLA');
     @Override
     public void deleteById(Long id) {
 
+
+        String deletecarByIdQuery = """
+                DELETE
+                FROM CARS
+                WHERE ID = ?
+                """;
+
+        try {
+
+            PreparedStatement queryStatement = dbConnection.prepareStatement(deletecarByIdQuery);
+            queryStatement.setLong(1,id);
+            int numberOfTouchRecords = queryStatement.executeUpdate();
+            System.out.println("Number of touched records: " + numberOfTouchRecords);
+
+
+
+        } catch (SQLException e) {
+            System.out.println("Unexpected sql exeption occured");
+            e.printStackTrace();
+        }
+
+
     }
 }
