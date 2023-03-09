@@ -41,6 +41,10 @@ public class CarDaoExample {
             carDao.save(newCarToSave);
             System.out.println("Cars now: " +carDao.findAll());
 
+            System.out.println();
+            Car toUpdate = new Car(3L, "Pink", "Jeep", "cherooke");
+            carDao.save(toUpdate);
+
 
         } catch (SQLException e) {
             throw new RuntimeException(e);

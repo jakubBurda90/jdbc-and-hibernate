@@ -19,7 +19,12 @@ public class CarDao implements DataAcess <Car, Long>{
     public void save(Car car) {
         String saveQuery;
         if (car.id() != null) {
-            // update
+
+            saveQuery = """
+                            UPDATE CARS
+                            SET COLOUR = ?, BRAND = ?, MODEL = ?
+                            WHERE ID = ?
+                            """;
         } else {
             // insert
             saveQuery = """
